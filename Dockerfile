@@ -26,5 +26,7 @@ CMD [ "npm", "run", "e2e" ]
 # Running app using container base above
 FROM base
 
+EXPOSE 3000
+
 # CMD could be overwritten in docker-compose.yml for development build
 CMD [ "npm", "run", "start:prod" ]

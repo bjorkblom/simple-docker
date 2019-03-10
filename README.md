@@ -12,7 +12,7 @@ The service test is just an example of adding a sep test service that runs all t
 ## Build and run production container
 
 1. `docker build -t web .`
-2. `docker run -it web`
+2. `docker run -p 80:3000 -it web`
 
 ## Build and run tests
 
