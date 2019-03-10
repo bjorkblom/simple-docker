@@ -17,6 +17,11 @@ COPY ./node_modules /usr/milou/app/node_modules
 FROM base as test
 CMD [ "npm", "run", "test" ]
 
+### E2E ###
+# Running tests using container base above
+FROM base as e2e
+CMD [ "npm", "run", "e2e" ]
+
 ### RUN APP ###
 # Running app using container base above
 FROM base

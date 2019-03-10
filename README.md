@@ -18,3 +18,8 @@ The service test is just an example of adding a sep test service that runs all t
 
 1. `docker build --target test -t web .`
 2. `docker run -it web`
+
+## Build and run e2e
+
+1. `docker build --target e2e -t web .`
+2. `docker run -it web`

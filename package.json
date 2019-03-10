@@ -6,7 +6,8 @@
   "scripts": {
     "start": "echo \"Starting dev\" && node src/index.js",
     "start:prod": "echo \"Starting prod\" && node src/index.js",
-    "test": "echo \"Running tests\""
+    "test": "echo \"Running tests\"",
+    "e2e": "echo \"Running e2e\""
   },
   "author": "",
   "license": "ISC",
