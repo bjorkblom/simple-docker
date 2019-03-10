@@ -1,0 +1,13 @@
+{
+  "name": "docker-env",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo \"Starting dev\" && node src/index.js",
+    "start:prod": "echo \"Starting prod\" && node src/index.js",
+    "install": "echo \"Installing dependencies\""
+  },
+  "author": "",
+  "license": "ISC"
+}
