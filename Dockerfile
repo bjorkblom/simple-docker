@@ -1,17 +1,25 @@
-FROM node:10-alpine
+FROM node:10-alpine as base
 
 # Falls back to production enviroment var if none is specified
 ARG NODE_ENV=production
-# Overrides enviroment is NODE_ENV is specified
+# Overrides enviroment if NODE_ENV is specified
 ENV NODE_ENV=${NODE_ENV}
 
 # App specific tasks
-WORKDIR /usr/src/app
-COPY ./package.json /usr/src/app
-COPY ./src /usr/src/app/src
+WORKDIR /usr/milou/app
+COPY ./package*.json /usr/milou/app/
+RUN npm ci
+COPY ./src /usr/milou/app/src
+COPY ./node_modules /usr/milou/app/node_modules
 
-# RUN will always run in any enviroments
-RUN [ "npm", "run", "install" ]
+### TEST ###
+# Running tests using container base above
+FROM base as test
+CMD [ "npm", "run", "test" ]
 
-# CMD could be overwritten in docker-compose.yml for dev/prod build
+### RUN APP ###
+# Running app using container base above
+FROM base
+
+# CMD could be overwritten in docker-compose.yml for development build
 CMD [ "npm", "run", "start:prod" ]

@@ -1,4 +1,4 @@
-version: '3'
+version: '3.4'
 
 services:
   web:
@@ -6,5 +6,15 @@ services:
     volumes:
       - .:/usr/src/app
     command: npm start
+    environment:
+      - NODE_ENV="development"
+  
+  # Optional if test should be run in paralell when developing
+  test:
+    build:
+      context: .
+      target: test
+    volumes:
+      - .:/usr/src/app
     environment:
       - NODE_ENV="development"

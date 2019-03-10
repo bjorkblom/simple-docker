@@ -6,8 +6,11 @@
   "scripts": {
     "start": "echo \"Starting dev\" && node src/index.js",
     "start:prod": "echo \"Starting prod\" && node src/index.js",
-    "install": "echo \"Installing dependencies\""
+    "test": "echo \"Running tests\""
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
 }
