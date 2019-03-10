@@ -9,12 +9,12 @@
 
 The service test is just an example of adding a sep test service that runs all test while developing.
 
-## Deploy production
+## Build and run production container
 
 1. `docker build -t web .`
 2. `docker run -it web`
 
-## Running test
+## Build and run tests
 
 1. `docker build --target test -t web .`
 2. `docker run -it web`
