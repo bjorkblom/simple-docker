@@ -16,5 +16,5 @@ The service test is just an example of adding a sep test service that runs all t
 
 ## Running test
 
-1. `docker build --target builder -t web .`
+1. `docker build --target test -t web .`
 2. `docker run -it web`
