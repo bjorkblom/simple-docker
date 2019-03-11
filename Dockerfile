@@ -7,7 +7,8 @@ ENV NODE_ENV=${NODE_ENV}
 
 # App specific tasks
 WORKDIR /usr/milou/app
-COPY ./package*.json /usr/milou/app/
+COPY ./package.json /usr/milou/app/
+COPY ./package-lock.json /usr/milou/app/
 RUN npm ci
 COPY ./src /usr/milou/app/src
 COPY ./node_modules /usr/milou/app/node_modules

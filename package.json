@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "echo \"Starting dev\" && node src/index.js",
+    "start": "echo \"Starting dev\" && nodemon src/index.js",
     "start:prod": "echo \"Starting prod\" && node src/index.js",
     "test": "echo \"Running tests\"",
     "e2e": "echo \"Running e2e\""
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10"
   }
 }
